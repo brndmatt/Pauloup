@@ -1,0 +1,17 @@
+:root{
+  --bg:#171717; --card:#222222; --text:#F5F5F5; --muted:#C9C9C9;
+  --accent:#8A4BAF; --accent-2:#B784E6; --danger:#E84D6E; --success:#46C28E;
+  --radius:14px;
+}
+html,body{background:var(--bg);color:var(--text);}
+
+/* Boutons et cartes (garde tes classes existantes) */
+button, .btn, .primary{ background:var(--accent); color:var(--text); border:none; border-radius:var(--radius); }
+.card, .panel, .box{ background:var(--card); border-radius:var(--radius); }
+
+/* Fond taverne optionnel : ajoute l'image ici public/img/bg-tavern.jpg */
+body::before{
+  content:""; position:fixed; inset:0;
+  background:url("/img/bg-tavern.jpg") center/cover no-repeat;
+  opacity:.15; z-index:-1; pointer-events:none;
+}
